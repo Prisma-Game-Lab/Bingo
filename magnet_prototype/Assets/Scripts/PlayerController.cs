@@ -20,8 +20,9 @@ namespace MagnetGame
 			return magnet;
 		}
 
-		public void AddToHand(Magnet magnet) => this.magnets.Add(magnet);
-		public void AddToHand(List<Magnet> magnets) => this.magnets.AddRange(magnets);
+		public void AddToHand(Magnet magnet) => this.hand.Add(magnet);
+		public void AddToHand(List<Magnet> magnets) => this.hand.AddRange(magnets);
+		public void ClearHand() => this.hand.Clear();
 	}
 }
 
