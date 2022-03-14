@@ -10,6 +10,7 @@ namespace MagnetGame
 
 		public List<Magnet> Magnets { get => magnets; }
 		public List<Magnet> Hand { get => hand; }
+		public Magnet Choice { get; private set; }
 
 		public void AddToMagnets(List<Magnet> magnets) => this.magnets.AddRange(magnets);
 		public void AddToMagnets(Magnet magnet) => magnets.Add(magnet);

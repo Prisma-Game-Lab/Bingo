@@ -11,7 +11,7 @@ namespace MagnetGame
 
 		public void InsertMagnet(Magnet magnet) => magnets.Add(magnet);
 
-		public Magnet getMagnet() {
+		public Magnet GetMagnet() {
 			int index = Random.Range(0, magnets.Count);
 			Magnet magnet = magnets[index];
 			magnets.RemoveAt(index);
