@@ -7,7 +7,7 @@ namespace MagnetGame
 	{
 		private List<Magnet> magnets = new List<Magnet>();
 
-		public List<Magnet> Magnets { get; }
+		public List<Magnet> Magnets { get => magnets; }
 
 		public void InsertMagnet(Magnet magnet) => magnets.Add(magnet);
 
