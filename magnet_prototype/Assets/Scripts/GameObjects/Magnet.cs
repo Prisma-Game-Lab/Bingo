@@ -10,11 +10,19 @@ namespace MagnetGame
 	// TODO: Implement effects
 	public class Magnet : MonoBehaviour
 	{
-		// TODO: Scriptable Object for magnets
 		[SerializeField]
-		private Type _type;
-		public Type type { get => _type; private set => _type = value; }
+		private MagnetSO magnet_stats;
 
+		// TODO: bloody naming consistency
+		public Type type { get; private set; }
+		public string Name { get; private set; }
+		public string Description { get; private set; }
+
+		private void Start() {
+			type = magnet_stats.magnet_type;
+			Name = magnet_stats.magnet_name;
+			Description = magnet_stats.magnet_description;
+		}
 
 		public Result Compare(Type type) => Compare(this.type, type);
 		public Result Compare(Magnet magnet) => Compare(this.type, magnet.type);
