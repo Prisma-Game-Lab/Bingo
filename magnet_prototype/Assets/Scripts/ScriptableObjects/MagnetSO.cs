@@ -9,6 +9,7 @@ namespace MagnetGame
 		public string magnet_description;
 		public Type magnet_type;
 		// TODO: magnet effect
+		// TODO: magnet sprite
 	}
 }
 
