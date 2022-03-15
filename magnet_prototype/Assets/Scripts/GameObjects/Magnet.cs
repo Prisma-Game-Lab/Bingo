@@ -14,8 +14,13 @@ namespace MagnetGame
 		private MagnetSO magnet_stats;
 
 		// TODO: bloody naming consistency
+		[field: SerializeField]
 		public Type type { get; private set; }
+
+		[field: SerializeField]
 		public string Name { get; private set; }
+
+		[field: SerializeField]
 		public string Description { get; private set; }
 
 		private void Start() {
