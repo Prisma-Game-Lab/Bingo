@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using TMPro;
 
 namespace MagnetGame
 {
@@ -11,22 +12,30 @@ namespace MagnetGame
 	public class Magnet : MonoBehaviour
 	{
 		[SerializeField]
-		private MagnetSO magnet_stats;
+		private MagnetSO magnetStats;
 
-		// TODO: bloody naming consistency
 		[field: SerializeField]
 		public Type type { get; private set; }
 
 		[field: SerializeField]
-		public string Name { get; private set; }
+		public string title { get; private set; }
 
 		[field: SerializeField]
-		public string Description { get; private set; }
+		public string description { get; private set; }
+
+		[SerializeField]
+		private TextMeshPro cardTitleTMP;
+
+		[SerializeField]
+		private TextMeshPro cardDescriptionTMP;
 
 		private void Start() {
-			type = magnet_stats.magnet_type;
-			Name = magnet_stats.magnet_name;
-			Description = magnet_stats.magnet_description;
+			type = magnetStats.magnet_type;
+			title = magnetStats.magnet_name;
+			description = magnetStats.magnet_description;
+
+			cardTitleTMP.SetText(title);
+			cardDescriptionTMP.SetText(description);
 		}
 
 		public Result Compare(Type type) => Compare(this.type, type);
