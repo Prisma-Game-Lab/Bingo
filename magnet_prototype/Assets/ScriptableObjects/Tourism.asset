@@ -12,6 +12,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13c1e5a20a57cf993a56fdb36a2d2eeb, type: 3}
   m_Name: Tourism
   m_EditorClassIdentifier: 
-  magnet_name: Tourism
-  magnet_description: Welcome to Llanfairpwllgwyngyllgogerychwyrndrobwllllantysiliogogogoch
-  magnet_type: 2
+  title:
+    m_TableReference:
+      m_TableCollectionName: GUID:7c45721585a0c6c0e805971755872d57
+    m_TableEntryReference:
+      m_KeyId: 50184855552
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  description:
+    m_TableReference:
+      m_TableCollectionName: GUID:68595be1d77bb0f3db6ac65ac6d39538
+    m_TableEntryReference:
+      m_KeyId: 30219968512
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  type: 0
+  references:
+    version: 1

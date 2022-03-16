@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.Localization;
 using TMPro;
 
 namespace MagnetGame
@@ -11,32 +12,32 @@ namespace MagnetGame
 	// TODO: Implement effects
 	public class Magnet : MonoBehaviour
 	{
-		[SerializeField]
-		private MagnetSO magnetStats;
+		[SerializeField] private MagnetSO magnetStats;
+		[SerializeField] private TextMeshPro cardTitleTMP;
+		[SerializeField] private TextMeshPro cardDescriptionTMP;
+		[field: SerializeField] public Type type { get; private set; }
 
-		[field: SerializeField]
-		public Type type { get; private set; }
+		public LocalizedString title { get; private set; }
+		public LocalizedString description { get; private set; }
 
-		[field: SerializeField]
-		public string title { get; private set; }
-
-		[field: SerializeField]
-		public string description { get; private set; }
-
-		[SerializeField]
-		private TextMeshPro cardTitleTMP;
-
-		[SerializeField]
-		private TextMeshPro cardDescriptionTMP;
-
-		private void Start() {
-			type = magnetStats.magnet_type;
-			title = magnetStats.magnet_name;
-			description = magnetStats.magnet_description;
-
-			cardTitleTMP.SetText(title);
-			cardDescriptionTMP.SetText(description);
+		private void Awake() {
+			type = magnetStats.type;
+			title = magnetStats.title;
+			description = magnetStats.description;
 		}
+
+		private void OnEnable() {
+			title.StringChanged += UpdateTitleString;
+			description.StringChanged += UpdateDescriptionString;
+		}
+
+		private void OnDisable() {
+			title.StringChanged -= UpdateTitleString;
+			description.StringChanged -= UpdateDescriptionString;
+		}
+
+		private void UpdateTitleString(string s) => cardTitleTMP.SetText(s);
+		private void UpdateDescriptionString(string s) => cardDescriptionTMP.SetText(s);
 
 		public Result Compare(Type type) => Compare(this.type, type);
 		public Result Compare(Magnet magnet) => Compare(this.type, magnet.type);

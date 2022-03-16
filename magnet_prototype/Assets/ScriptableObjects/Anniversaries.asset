@@ -12,6 +12,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13c1e5a20a57cf993a56fdb36a2d2eeb, type: 3}
   m_Name: Anniversaries
   m_EditorClassIdentifier: 
-  magnet_name: Anniversary
-  magnet_description: happy birthday to someone
-  magnet_type: 1
+  title:
+    m_TableReference:
+      m_TableCollectionName: GUID:7c45721585a0c6c0e805971755872d57
+    m_TableEntryReference:
+      m_KeyId: 212600889344
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  description:
+    m_TableReference:
+      m_TableCollectionName: GUID:68595be1d77bb0f3db6ac65ac6d39538
+    m_TableEntryReference:
+      m_KeyId: 139775188992
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  type: 0
+  references:
+    version: 1
