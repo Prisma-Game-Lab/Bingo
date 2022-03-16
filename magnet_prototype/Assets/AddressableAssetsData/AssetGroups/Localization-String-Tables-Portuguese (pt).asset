@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Localization-String-Tables-Portuguese (pt)
+  m_EditorClassIdentifier: 
+  m_GroupName: Localization-String-Tables-Portuguese (pt)
+  m_Data:
+    m_SerializedData: []
+  m_GUID: f7a7241a79e1ec3dba1b7b9a69690674
+  m_SerializeEntries:
+  - m_GUID: 614841450b34a5e9e96670396f98133a
+    m_Address: MagnetTitles_pt
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-pt
+    - Preload
+  - m_GUID: 712b568baaa2d078caf1cdedf5756a53
+    m_Address: MagnetDescriptions_pt
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-pt
+    - Preload
+  m_ReadOnly: 1
+  m_Settings: {fileID: 11400000, guid: 32dc601afcce1fd58af25d9b44d901bb, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: cc13685ce5d51733fbdad570f6ca0df7, type: 2}
+    - {fileID: 11400000, guid: 663baad7f3e3d6725bda89c54cd722c5, type: 2}
