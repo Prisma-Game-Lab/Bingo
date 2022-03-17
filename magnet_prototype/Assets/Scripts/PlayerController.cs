@@ -5,24 +5,24 @@ namespace MagnetGame
 {
 	public class PlayerController : MonoBehaviour
 	{
-		private List<Magnet> magnets = new List<Magnet>();
-		private List<Magnet> hand = new List<Magnet>();
+		private List<MagnetSO> magnets = new List<MagnetSO>();
+		private List<MagnetSO> hand = new List<MagnetSO>();
 
-		public List<Magnet> Magnets { get => magnets; }
-		public List<Magnet> Hand { get => hand; }
+		public List<MagnetSO> Magnets { get => magnets; }
+		public List<MagnetSO> Hand { get => hand; }
 		public Magnet Choice { get; private set; }
 
-		public void AddToMagnets(List<Magnet> magnets) => this.magnets.AddRange(magnets);
-		public void AddToMagnets(Magnet magnet) => magnets.Add(magnet);
+		public void AddToMagnets(List<MagnetSO> magnets) => this.magnets.AddRange(magnets);
+		public void AddToMagnets(MagnetSO magnet) => magnets.Add(magnet);
 
-		public Magnet HandRemoveAt(int index) {
-			Magnet magnet = hand[index];
+		public MagnetSO HandRemoveAt(int index) {
+			MagnetSO magnet = hand[index];
 			hand.RemoveAt(index);
 			return magnet;
 		}
 
-		public void AddToHand(Magnet magnet) => this.hand.Add(magnet);
-		public void AddToHand(List<Magnet> magnets) => this.hand.AddRange(magnets);
+		public void AddToHand(MagnetSO magnet) => this.hand.Add(magnet);
+		public void AddToHand(List<MagnetSO> magnets) => this.hand.AddRange(magnets);
 		public void ClearHand() => this.hand.Clear();
 	}
 }

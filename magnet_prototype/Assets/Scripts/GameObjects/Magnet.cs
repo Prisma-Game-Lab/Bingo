@@ -12,7 +12,7 @@ namespace MagnetGame
 	// TODO: Implement effects
 	public class Magnet : MonoBehaviour
 	{
-		[SerializeField] private MagnetSO magnetStats;
+		[field: SerializeField] public MagnetSO magnetStats { get; private set; }
 		[SerializeField] private TextMeshPro cardTitleTMP;
 		[SerializeField] private TextMeshPro cardDescriptionTMP;
 		[field: SerializeField] public Type type { get; private set; }

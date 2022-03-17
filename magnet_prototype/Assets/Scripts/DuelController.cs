@@ -43,8 +43,10 @@ namespace MagnetGame
 			// TODO: Start Rounds
 		}
 
+		// TODO: generate Magnet prefab objects
+
 		private void RoundStart() {
-			Magnet[] magnets = new Magnet[2];
+			MagnetSO[] magnets = new MagnetSO[2];
 
 			magnets[0] = pile.GetMagnet();
 			magnets[1] = pile.GetMagnet();

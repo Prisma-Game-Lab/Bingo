@@ -5,15 +5,18 @@ namespace MagnetGame
 {
 	public class MagnetPile : MonoBehaviour
 	{
-		private List<Magnet> magnets = new List<Magnet>();
+		private List<MagnetSO> magnets = new List<MagnetSO>();
 
-		public List<Magnet> Magnets { get => magnets; }
+		public List<MagnetSO> Magnets { get => magnets; }
 
-		public void InsertMagnet(Magnet magnet) => magnets.Add(magnet);
+		public void InsertMagnet(MagnetSO magnet) => magnets.Add(magnet);
+		public void InsertMagnet(Magnet magnet) {
+ 			magnets.Add(magnet.magnetStats);
+		}
 
-		public Magnet GetMagnet() {
+		public MagnetSO GetMagnet() {
 			int index = Random.Range(0, magnets.Count);
-			Magnet magnet = magnets[index];
+			MagnetSO magnet = magnets[index];
 			magnets.RemoveAt(index);
 			return magnet;
 		}
