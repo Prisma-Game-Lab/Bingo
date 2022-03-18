@@ -23,7 +23,7 @@ namespace MagnetGame
 		}
 
 		private void Start() {
-			// state = State.SETUP;
+			duelStateManager.CurrentDuelState = DuelState.SETUP;
 		}
 
 		private void Update() { }
