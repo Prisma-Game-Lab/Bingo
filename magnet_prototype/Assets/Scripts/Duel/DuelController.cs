@@ -9,7 +9,6 @@ namespace MagnetGame
 		[SerializeField] private PlayerController player;
 		[SerializeField] private PlayerController AI;
 		[SerializeField] private MagnetPile pile;
-		[SerializeField] private MagnetPile discard;
 
 		private bool playerChooses = true;
 
@@ -52,15 +51,15 @@ namespace MagnetGame
 		// TODO: generate Magnet prefab objects
 
 		private void RoundSetup() {
-			pile.Magnets.AddRange(player.Magnets);
-			pile.Magnets.AddRange(AI.Magnets);
+			pile.AddToStock(player.Magnets);
+			pile.AddToStock(AI.Magnets);
 
 			player.ClearHand();
 			AI.ClearHand();
 
-			for (int i = 0; i < 3; ++i) {
-				player.AddToHand(pile.GetMagnet());
-				AI.AddToHand(pile.GetMagnet());
+			for (int i = 0; i < 6; ++i) {
+				player.AddToHand(pile.Draw());
+				AI.AddToHand(pile.Draw());
 			}
 
 			duelStateManager.CurrentDuelState = DuelState.ROUND_START;
@@ -69,8 +68,8 @@ namespace MagnetGame
 		private void RoundStart() {
 			MagnetSO[] magnets = new MagnetSO[2];
 
-			magnets[0] = pile.GetMagnet();
-			magnets[1] = pile.GetMagnet();
+			magnets[0] = pile.Draw();
+			magnets[1] = pile.Draw();
 
 			if (playerChooses) {
 				// TODO: give player choice
@@ -117,8 +116,8 @@ namespace MagnetGame
 			player.Choice = null;
 			AI.Choice = null;
 
-			discard.InsertMagnet(playerMagnet);
-			discard.InsertMagnet(aiMagnet);
+			pile.Discard(playerMagnet.magnetStats);
+			pile.Discard(aiMagnet.magnetStats);
 
 			Destroy(playerMagnet);
 			Destroy(aiMagnet);

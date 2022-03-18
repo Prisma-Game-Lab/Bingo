@@ -3,7 +3,7 @@ namespace MagnetGame {
 		SETUP,
 		ROUND_START,
 		ROUND_CHOICE,
-		ROUND_PLAY
+		ROUND_PLAY,
 	};
 }
 
