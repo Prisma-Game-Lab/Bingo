@@ -11,7 +11,7 @@ namespace MagnetGame
 
 		public void InsertMagnet(MagnetSO magnet) => magnets.Add(magnet);
 		public void InsertMagnet(Magnet magnet) {
- 			magnets.Add(magnet.magnetStats);
+			magnets.Add(magnet.magnetStats);
 		}
 
 		public MagnetSO GetMagnet() {

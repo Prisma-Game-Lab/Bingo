@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.Localization;
 using TMPro;
 
@@ -10,7 +11,7 @@ namespace MagnetGame
 	public enum Type { SERVICES, ANNIVERSARIES, TOURISM, }
 
 	// TODO: Implement effects
-	public class Magnet : MonoBehaviour
+	public class Magnet : MonoBehaviour, IPointerClickHandler
 	{
 		[field: SerializeField] public MagnetSO magnetStats { get; private set; }
 		[SerializeField] private TextMeshPro cardTitleTMP;
@@ -19,6 +20,9 @@ namespace MagnetGame
 
 		public LocalizedString title { get; private set; }
 		public LocalizedString description { get; private set; }
+
+		public delegate void MagnetClickedEvent(Magnet source);
+		public static event MagnetClickedEvent OnMagnetClicked;
 
 		private void Awake() {
 			type = magnetStats.type;
@@ -35,6 +39,8 @@ namespace MagnetGame
 			title.StringChanged -= UpdateTitleString;
 			description.StringChanged -= UpdateDescriptionString;
 		}
+
+		public void OnPointerClick(PointerEventData eventData) => OnMagnetClicked?.Invoke(this);
 
 		private void UpdateTitleString(string s) => cardTitleTMP.SetText(s);
 		private void UpdateDescriptionString(string s) => cardDescriptionTMP.SetText(s);
