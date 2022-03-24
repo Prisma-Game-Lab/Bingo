@@ -88,7 +88,7 @@ namespace MagnetGame
 		public void OnMagnetClicked(Magnet magnet) {
 			if (duelStateManager.CurrentDuelState != DuelState.ROUND_CHOICE)
 				return;
-			player.Hand.Remove(magnet.magnetStats);
+			player.Hand.Remove(magnet.MagnetStats);
 			player.Choice = magnet;
 			duelStateManager.CurrentDuelState = DuelState.ROUND_PLAY;
 		}
@@ -116,8 +116,8 @@ namespace MagnetGame
 			player.Choice = null;
 			AI.Choice = null;
 
-			pile.Discard(playerMagnet.magnetStats);
-			pile.Discard(aiMagnet.magnetStats);
+			pile.Discard(playerMagnet.MagnetStats);
+			pile.Discard(aiMagnet.MagnetStats);
 
 			Destroy(playerMagnet);
 			Destroy(aiMagnet);

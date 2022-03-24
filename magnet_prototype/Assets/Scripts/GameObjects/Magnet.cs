@@ -13,9 +13,10 @@ namespace MagnetGame
 	// TODO: Implement effects
 	public class Magnet : MonoBehaviour, IPointerClickHandler
 	{
-		[field: SerializeField] public MagnetSO magnetStats { get; private set; }
+		[SerializeField] private MagnetSO magnetStats;
 		[SerializeField] private TextMeshPro cardTitleTMP;
 		[SerializeField] private TextMeshPro cardDescriptionTMP;
+
 		[field: SerializeField] public Type type { get; private set; }
 
 		public LocalizedString title { get; private set; }
@@ -24,10 +25,16 @@ namespace MagnetGame
 		public delegate void MagnetClickedEvent(Magnet source);
 		public static event MagnetClickedEvent OnMagnetClicked;
 
+		public MagnetSO MagnetStats {
+			get => magnetStats;
+			set {
+				magnetStats = value;
+				UpdateMagnetSO();
+			}
+		}
+
 		private void Awake() {
-			type = magnetStats.type;
-			title = magnetStats.title;
-			description = magnetStats.description;
+			if (magnetStats != null) UpdateMagnetSO();
 		}
 
 		private void OnEnable() {
@@ -38,6 +45,12 @@ namespace MagnetGame
 		private void OnDisable() {
 			title.StringChanged -= UpdateTitleString;
 			description.StringChanged -= UpdateDescriptionString;
+		}
+
+		private void UpdateMagnetSO() {
+			type = magnetStats.type;
+			title = magnetStats.title;
+			description = magnetStats.description;
 		}
 
 		public void OnPointerClick(PointerEventData eventData) => OnMagnetClicked?.Invoke(this);
