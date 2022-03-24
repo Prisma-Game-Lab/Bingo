@@ -8,7 +8,7 @@ namespace MagnetGame
 	{
 		public LocalizedString title;
 		public LocalizedString description;
-		public Type type;
+		public MagnetType type;
 		public Sprite sprite;
 		// TODO: magnet effect
 	}

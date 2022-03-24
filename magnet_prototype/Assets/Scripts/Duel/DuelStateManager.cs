@@ -19,6 +19,11 @@ namespace MagnetGame
 
 		public delegate void DuelStateChangeHandler(DuelState state);
 		public event DuelStateChangeHandler OnDuelStateChanged;
+
+		public void SetupDuel() {
+			CurrentDuelState = DuelState.SETUP;
+			OnDuelStateChanged?.Invoke(currentDuelState);
+		}
 	}
 }
 

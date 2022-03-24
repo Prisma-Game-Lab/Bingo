@@ -5,13 +5,15 @@ namespace MagnetGame
 {
 	public class Player : MonoBehaviour
 	{
+		[SerializeField] private List<MagnetSO> defaultMagnets;
+
 		private List<MagnetSO> magnets = new List<MagnetSO>();
 		private List<MagnetSO> hand = new List<MagnetSO>();
 		private int health = 3;
 
 		public List<MagnetSO> Magnets { get => magnets; }
 		public List<MagnetSO> Hand { get => hand; }
-		public Magnet Choice { get; set; }
+		public MagnetSO Choice { get; set; }
 		public int Health { get => health; }
 
 		public void AddToMagnets(List<MagnetSO> magnets) => this.magnets.AddRange(magnets);
@@ -30,6 +32,11 @@ namespace MagnetGame
 				return true;
 			else
 				return false;
+		}
+
+		private void Awake() {
+			if (defaultMagnets.Count > 0)
+				AddToMagnets(defaultMagnets);
 		}
 
 	}
