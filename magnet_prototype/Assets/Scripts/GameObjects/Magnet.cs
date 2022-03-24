@@ -32,6 +32,8 @@ namespace MagnetGame
 			}
 		}
 
+		public bool isSelectable = true;
+
 		public delegate void MagnetClickedEvent(Magnet source);
 		public static event MagnetClickedEvent OnMagnetClicked;
 
@@ -51,13 +53,19 @@ namespace MagnetGame
 		}
 
 		private void OnEnable() {
-			title.StringChanged += UpdateTitleString;
-			description.StringChanged += UpdateDescriptionString;
+			if (title != null)
+				title.StringChanged += UpdateTitleString;
+
+			if (description != null)
+				description.StringChanged += UpdateDescriptionString;
 		}
 
 		private void OnDisable() {
-			title.StringChanged -= UpdateTitleString;
-			description.StringChanged -= UpdateDescriptionString;
+			if (title != null)
+				title.StringChanged -= UpdateTitleString;
+
+			if (description != null)
+				description.StringChanged -= UpdateDescriptionString;
 		}
 
 		private void UpdateMagnetSO() {
@@ -66,13 +74,21 @@ namespace MagnetGame
 			description = magnetStats.description;
 		}
 
-		public void OnPointerClick(PointerEventData eventData)
-			=> OnMagnetClicked?.Invoke(this);
+		public void OnPointerClick(PointerEventData eventData) {
+			if (!isSelectable)
+				return;
+			OnMagnetClicked?.Invoke(this);
+		}
 
-		public void OnPointerEnter(PointerEventData eventData)
-			=> graphics.transform.localPosition = selectedPos;
+		public void OnPointerEnter(PointerEventData eventData) {
+			if (!isSelectable)
+				return;
+			graphics.transform.localPosition = selectedPos;
+		}
 
 		public void OnPointerExit(PointerEventData eventData) {
+			if (!isSelectable)
+				return;
 			if (!isSelected)
 				graphics.transform.localPosition = Vector3.zero;
 		}

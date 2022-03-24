@@ -12,6 +12,7 @@ namespace MagnetGame
 		[SerializeField] private AIController ai;
 		[SerializeField] private MagnetPile pile;
 		[SerializeField] private GameObject[] magnetsGO;
+		[SerializeField] private GameObject[] playedMagnetsGO;
 
 		private Dictionary<Magnet, GameObject> magnetGO;
 
@@ -26,6 +27,11 @@ namespace MagnetGame
 
 			foreach (var magnet in magnetsGO)
 				magnetGO.Add(magnet.GetComponent<Magnet>(), magnet);
+
+			foreach (var magnet in playedMagnetsGO) {
+				magnet.GetComponent<Magnet>().isSelectable = false;
+				magnet.SetActive(false);
+			}
 		}
 
 		private void OnDestroy() {
@@ -63,6 +69,8 @@ namespace MagnetGame
 		}
 
 		private void RoundSetup() {
+			playerEffectSelection.SetActive(false);
+
 			pile.AddToStock(player.Magnets);
 			pile.AddToStock(ai.Magnets);
 
@@ -81,8 +89,6 @@ namespace MagnetGame
 		}
 
 		private void RoundStart() {
-			playerEffectSelection.SetActive(false);
-
 			if (selectedMagnet != null) {
 				MagnetSO[] magnets = new MagnetSO[2];
 
@@ -145,16 +151,26 @@ namespace MagnetGame
 			MagnetSO playerMagnet = player.Choice;
 			MagnetSO aiMagnet = ai.Choice;
 
+			playerEffectSelection.SetActive(false);
+
 			switch (playerMagnet.type.Compare(aiMagnet.type)) {
 				case Result.WIN: // TODO: Player wins
+					ai.Damage();
 					break;
 
 				case Result.LOSE: // TODO: Player loses
+					player.Damage();
 					break;
 
 				case Result.DRAW: // TODO: Draw
 					break;
 			}
+
+			foreach (var magnet in playedMagnetsGO)
+				magnet.SetActive(true);
+
+			playedMagnetsGO[0].GetComponent<Magnet>().MagnetStats = player.Choice;
+			playedMagnetsGO[1].GetComponent<Magnet>().MagnetStats = ai.Choice;
 
 			player.Choice = null;
 			ai.Choice = null;
