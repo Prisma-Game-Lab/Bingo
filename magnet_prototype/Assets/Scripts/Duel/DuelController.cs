@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Localization.Components;
 
 namespace MagnetGame
 {
@@ -13,6 +14,8 @@ namespace MagnetGame
 		[SerializeField] private MagnetPile pile;
 		[SerializeField] private GameObject[] magnetsGO;
 		[SerializeField] private GameObject[] playedMagnetsGO;
+		[SerializeField] private GameObject resultUI;
+		[SerializeField] private GameObject roundResultText;
 
 		private Dictionary<Magnet, GameObject> magnetGO;
 
@@ -28,10 +31,10 @@ namespace MagnetGame
 			foreach (var magnet in magnetsGO)
 				magnetGO.Add(magnet.GetComponent<Magnet>(), magnet);
 
-			foreach (var magnet in playedMagnetsGO) {
+			foreach (var magnet in playedMagnetsGO)
 				magnet.GetComponent<Magnet>().isSelectable = false;
-				magnet.SetActive(false);
-			}
+
+			resultUI.SetActive(false);
 		}
 
 		private void OnDestroy() {
@@ -152,20 +155,22 @@ namespace MagnetGame
 			playerEffectSelection.SetActive(false);
 
 			switch (playerMagnet.type.Compare(aiMagnet.type)) {
-				case Result.WIN: // TODO: Player wins
+				case Result.WIN:
+					roundResultText.GetComponent<LocalizeStringEvent>().StringReference.SetReference("UI", "round_victory");
 					ai.Damage();
 					break;
 
-				case Result.LOSE: // TODO: Player loses
+				case Result.LOSE:
+					roundResultText.GetComponent<LocalizeStringEvent>().StringReference.SetReference("UI", "round_lose");
 					player.Damage();
 					break;
 
-				case Result.DRAW: // TODO: Draw
+				case Result.DRAW:
+					roundResultText.GetComponent<LocalizeStringEvent>().StringReference.SetReference("UI", "round_draw");
 					break;
 			}
 
-			foreach (var magnet in playedMagnetsGO)
-				magnet.SetActive(true);
+			resultUI.SetActive(true);
 
 			playedMagnetsGO[0].GetComponent<Magnet>().MagnetStats = player.Choice;
 			playedMagnetsGO[1].GetComponent<Magnet>().MagnetStats = ai.Choice;
@@ -177,6 +182,15 @@ namespace MagnetGame
 			pile.Discard(aiMagnet);
 
 			selectedMagnet.IsSelected = false;
+
+			duelStateManager.CurrentDuelState = DuelState.ROUND_CONFIRM;
+		}
+
+		public void Continue() {
+			if (duelStateManager.CurrentDuelState != DuelState.ROUND_CONFIRM)
+				return;
+
+			resultUI.SetActive(false);
 
 			duelStateManager.CurrentDuelState = DuelState.ROUND_START;
 		}
