@@ -138,8 +138,6 @@ namespace MagnetGame
 		}
 
 		private void RoundChoice() {
-			// TODO: Give AI and Player choice
-			// TODO: Play round
 			ai.Choice = ai.ChoosePlay();
 		}
 
