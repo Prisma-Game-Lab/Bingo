@@ -11,7 +11,7 @@ namespace MagnetGame
 	public enum Type { SERVICES, ANNIVERSARIES, TOURISM, }
 
 	// TODO: Implement effects
-	public class Magnet : MonoBehaviour, IPointerClickHandler
+	public class Magnet : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
 	{
 		[SerializeField] private MagnetSO magnetStats;
 		[SerializeField] private TextMeshPro cardTitleTMP;
@@ -54,6 +54,8 @@ namespace MagnetGame
 		}
 
 		public void OnPointerClick(PointerEventData eventData) => OnMagnetClicked?.Invoke(this);
+		public void OnPointerEnter(PointerEventData eventData) => Debug.Log("pointer enter", this);
+		public void OnPointerExit(PointerEventData eventData) => Debug.Log("pointer exit", this);
 
 		private void UpdateTitleString(string s) => cardTitleTMP.SetText(s);
 		private void UpdateDescriptionString(string s) => cardDescriptionTMP.SetText(s);
