@@ -1,16 +1,16 @@
 fileFormatVersion: 2
-guid: 8d5dd0b0c49f95e41a62b0c1343a03d2
+guid: 1d28891ff78a64493b0eeda50f351ef3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5887013799703506180
-    second: 2022.03.25_pause_e_ponto_de_vida_0
+      213: -3297604030271261064
+    second: "i\u0301cones_0"
   - first:
-      213: -3986003641276132817
-    second: 2022.03.25_pause_e_ponto_de_vida_1
+      213: 6035546193233522543
+    second: "i\u0301cones_1"
   - first:
-      213: 5374073160995474773
-    second: 2022.03.25_pause_e_ponto_de_vida_2
+      213: 6625783831932891164
+    second: "i\u0301cones_2"
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -100,43 +100,64 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 2022.03.25_pause_e_ponto_de_vida_1
+      name: "i\u0301cones_0"
       rect:
         serializedVersion: 2
-        x: 0
-        y: 33
-        width: 1850
-        height: 2103
+        x: 115
+        y: 308
+        width: 480
+        height: 480
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f2292589ecedea8c0800000000000000
-      internalID: -3986003641276132817
+      spriteID: 876f8cd1b9e8c32d0800000000000000
+      internalID: -3297604030271261064
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 2022.03.25_pause_e_ponto_de_vida_2
+      name: "i\u0301cones_1"
       rect:
         serializedVersion: 2
-        x: 4322
-        y: 0
-        width: 2175
-        height: 2169
+        x: 719
+        y: 308
+        width: 480
+        height: 480
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 55d881e111b849a40800000000000000
-      internalID: 5374073160995474773
+      spriteID: f6f2529f84192c350800000000000000
+      internalID: 6035546193233522543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "i\u0301cones_2"
+      rect:
+        serializedVersion: 2
+        x: 1326
+        y: 308
+        width: 480
+        height: 480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c10f2ec4a4383fb50800000000000000
+      internalID: 6625783831932891164
       vertices: []
       indices: 
       edges: []
