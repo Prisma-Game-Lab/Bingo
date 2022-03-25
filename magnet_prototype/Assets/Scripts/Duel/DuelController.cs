@@ -22,6 +22,7 @@ namespace MagnetGame
 
 		private bool playerChooses = true;
 		private Magnet selectedMagnet = null;
+		private int selectedEffect = 0;
 
 		private void Awake() {
 			Magnet.OnMagnetClicked += OnMagnetClicked;
@@ -129,6 +130,8 @@ namespace MagnetGame
 			player.Choice = selectedMagnet.MagnetStats;
 			magnetGO[selectedMagnet].SetActive(false);
 
+			selectedEffect = effect;
+
 			duelStateManager.CurrentDuelState = DuelState.ROUND_PLAY;
 		}
 
@@ -150,11 +153,14 @@ namespace MagnetGame
 				case Result.WIN:
 					roundResultText.GetComponent<LocalizeStringEvent>().StringReference.SetReference("UI", "round_victory");
 					ai.Damage();
+					playerMagnet.effects[selectedEffect].GetScript().Effect(player, ai, pile);
 					break;
 
 				case Result.LOSE:
 					roundResultText.GetComponent<LocalizeStringEvent>().StringReference.SetReference("UI", "round_lose");
+
 					player.Damage();
+					aiMagnet.effects[0].GetScript().Effect(ai, player, pile);
 					break;
 
 				case Result.DRAW:

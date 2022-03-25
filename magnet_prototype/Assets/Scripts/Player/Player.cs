@@ -34,6 +34,13 @@ namespace MagnetGame
 				return false;
 		}
 
+		public void Heal(int heal = 1) {
+			health += heal;
+
+			if (health > 3)
+				health = 3;
+		}
+
 		private void Awake() {
 			if (defaultMagnets.Count > 0)
 				AddToMagnets(defaultMagnets);

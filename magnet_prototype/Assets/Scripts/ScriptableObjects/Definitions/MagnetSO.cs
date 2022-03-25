@@ -9,6 +9,7 @@ namespace MagnetGame
 		public LocalizedString title;
 		public LocalizedString description;
 		public MagnetType type;
+		public MagnetEffect[] effects = new MagnetEffect[2];
 		public Sprite sprite;
 		// TODO: magnet effect
 	}
