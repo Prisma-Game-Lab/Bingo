@@ -8,7 +8,7 @@ namespace MagnetGame
 	{
 		[SerializeField] private DuelStateManager duelStateManager;
 		[SerializeField] private GameObject playerEffectSelection;
-
+		[SerializeField] private GameObject[] playerEffectSelectionButtons;
 		[SerializeField] private PlayerController player;
 		[SerializeField] private AIController ai;
 		[SerializeField] private MagnetPile pile;
@@ -107,6 +107,16 @@ namespace MagnetGame
 					magnet.IsSelected = true;
 					if (!playerEffectSelection.activeInHierarchy)
 						playerEffectSelection.SetActive(true);
+
+					MagnetEffect[] selectedMagnetEffect = selectedMagnet
+															.GetComponent<Magnet>()
+															.MagnetStats.effects;
+
+					for (int i = 0; i < 2; ++i)
+						playerEffectSelectionButtons[i]
+							.GetComponent<LocalizeStringEvent>()
+							.StringReference.SetReference("EffectNames", selectedMagnetEffect[i].GetLabel());
+
 					break;
 
 				case DuelState.ROUND_DRAW:
@@ -151,20 +161,25 @@ namespace MagnetGame
 
 			switch (playerMagnet.type.Compare(aiMagnet.type)) {
 				case Result.WIN:
-					roundResultText.GetComponent<LocalizeStringEvent>().StringReference.SetReference("UI", "round_victory");
+					roundResultText.GetComponent<LocalizeStringEvent>()
+						.StringReference.SetReference("UI", "round_victory");
+
 					ai.Damage();
 					playerMagnet.effects[selectedEffect].GetScript().Effect(player, ai, pile);
 					break;
 
 				case Result.LOSE:
-					roundResultText.GetComponent<LocalizeStringEvent>().StringReference.SetReference("UI", "round_lose");
+					roundResultText.GetComponent<LocalizeStringEvent>()
+						.StringReference.SetReference("UI", "round_lose");
 
 					player.Damage();
 					aiMagnet.effects[0].GetScript().Effect(ai, player, pile);
 					break;
 
 				case Result.DRAW:
-					roundResultText.GetComponent<LocalizeStringEvent>().StringReference.SetReference("UI", "round_draw");
+					roundResultText.GetComponent<LocalizeStringEvent>()
+						.StringReference
+						.SetReference("UI", "round_draw");
 					break;
 			}
 
