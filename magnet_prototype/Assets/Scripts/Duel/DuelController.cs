@@ -278,10 +278,10 @@ namespace MagnetGame
 						PlayerDraws(magnets[0]);
 					}
 				} else {
-					if (ai.Hand.Count < 3)
+					while (ai.Hand.Count < 3)
 						ai.AddToHand(pile.Draw());
 
-					if (player.Hand.Count < 3)
+					while (player.Hand.Count < 3)
 						player.AddToHand(pile.Draw());
 				}
 			}

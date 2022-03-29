@@ -9,7 +9,6 @@ namespace MagnetGame
 		public string opponentName;
 		public Sprite scenarySprite;
 		public Sprite opponentSprite;
-		public List<MagnetSO> opponentMagnetPool;
 	}
 }
 
