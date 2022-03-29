@@ -3,7 +3,7 @@ using UnityEngine.Localization;
 
 namespace MagnetGame
 {
-	[CreateAssetMenu(fileName = "Magnet", menuName = "ScriptableObjects/MagnetScriptableObject")]
+	[CreateAssetMenu(fileName = "Magnet", menuName = "ScriptableObjects/Magnet")]
 	public class MagnetSO : ScriptableObject
 	{
 		public LocalizedString title;
@@ -11,7 +11,6 @@ namespace MagnetGame
 		public MagnetType type;
 		public MagnetEffect[] effects = new MagnetEffect[2];
 		public Sprite sprite;
-		// TODO: magnet effect
 	}
 }
 
