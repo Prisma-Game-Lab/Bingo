@@ -5,6 +5,7 @@ namespace MagnetGame {
 		ROUND_CHOICE,
 		ROUND_PLAY,
 		ROUND_CONFIRM,
+		ROUND_OMEN,
 		ROUND_DRAW,
 	};
 }
