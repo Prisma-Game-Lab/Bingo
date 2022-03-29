@@ -269,12 +269,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultMagnets:
-  - {fileID: 11400000, guid: b2ff90e674c3319c09286becacc3156e, type: 2}
-  - {fileID: 11400000, guid: 526862d2a0de6471a9f29c0ddfb3d375, type: 2}
-  - {fileID: 11400000, guid: 2ca9a544015315d5eaf2a461ab2a0e2b, type: 2}
-  - {fileID: 11400000, guid: b2ff90e674c3319c09286becacc3156e, type: 2}
-  - {fileID: 11400000, guid: 526862d2a0de6471a9f29c0ddfb3d375, type: 2}
-  - {fileID: 11400000, guid: 2ca9a544015315d5eaf2a461ab2a0e2b, type: 2}
+  - {fileID: 11400000, guid: 93763cecceffea741ad8d852e0f4fdb8, type: 2}
+  - {fileID: 11400000, guid: c7069a74b8efeb641ab79a45a68d871d, type: 2}
+  - {fileID: 11400000, guid: ac5314b6b5195044bb26c353c26e5701, type: 2}
+  - {fileID: 11400000, guid: e7d2abcb8aaafd845a2a2f0c2695456c, type: 2}
+  - {fileID: 11400000, guid: 122c0d41499f9e543b570ca136fe526f, type: 2}
+  - {fileID: 11400000, guid: e593bac8ed34c374b9ed76ebdd64b846, type: 2}
 --- !u!1001 &169653561
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -846,12 +846,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultMagnets:
-  - {fileID: 11400000, guid: b2ff90e674c3319c09286becacc3156e, type: 2}
-  - {fileID: 11400000, guid: 526862d2a0de6471a9f29c0ddfb3d375, type: 2}
-  - {fileID: 11400000, guid: 2ca9a544015315d5eaf2a461ab2a0e2b, type: 2}
-  - {fileID: 11400000, guid: b2ff90e674c3319c09286becacc3156e, type: 2}
-  - {fileID: 11400000, guid: 526862d2a0de6471a9f29c0ddfb3d375, type: 2}
-  - {fileID: 11400000, guid: 2ca9a544015315d5eaf2a461ab2a0e2b, type: 2}
+  - {fileID: 11400000, guid: f37be36ea5da59e48b4beda3b099e33d, type: 2}
+  - {fileID: 11400000, guid: c7069a74b8efeb641ab79a45a68d871d, type: 2}
+  - {fileID: 11400000, guid: afa3ec6f662c84d44b6338ec12018dd3, type: 2}
+  - {fileID: 11400000, guid: f37be36ea5da59e48b4beda3b099e33d, type: 2}
+  - {fileID: 11400000, guid: ed5ef127c97ba2548b12c6315e813f84, type: 2}
+  - {fileID: 11400000, guid: 7a7c50438b35d014689a6ad806bf1e98, type: 2}
 --- !u!1 &517241604
 GameObject:
   m_ObjectHideFlags: 0
