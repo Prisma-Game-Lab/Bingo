@@ -1,25 +1,25 @@
 fileFormatVersion: 2
-guid: fa7aa3654583c49849eca4a52b767f93
+guid: c26d8dd56b1ab4f67b2561e8cb6a6c0a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6332125955917315541
-    second: imas 1_0
+      213: 1726668585950737947
+    second: magnets2_0
   - first:
-      213: -558984910741051716
-    second: imas 1_1
+      213: 3461681555827653339
+    second: magnets2_1
   - first:
-      213: -3319300016609985650
-    second: imas 1_2
+      213: -6791906814707937384
+    second: magnets2_2
   - first:
-      213: -8503998076494052192
-    second: imas 1_3
+      213: 3303039298299891801
+    second: magnets2_3
   - first:
-      213: 3047174348190561437
-    second: imas 1_4
+      213: 8218280143738877979
+    second: magnets2_4
   - first:
-      213: 6453904054435604531
-    second: imas 1_5
+      213: -5575286404834748146
+    second: magnets2_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -64,7 +64,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 900
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -105,29 +105,17 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: imas 1_0
+      name: magnets2_0
       rect:
         serializedVersion: 2
-        x: 98
-        y: 957
-        width: 672
-        height: 894
+        x: 0
+        y: 1200
+        width: 1200
+        height: 1200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -135,20 +123,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b22848cfdf4cf18a0800000000000000
-      internalID: -6332125955917315541
+      spriteID: b167b6e3eeb56f710800000000000000
+      internalID: 1726668585950737947
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: imas 1_1
+      name: magnets2_1
       rect:
         serializedVersion: 2
-        x: 918
-        y: 1507
-        width: 1926
-        height: 329
+        x: 1200
+        y: 1200
+        width: 1200
+        height: 1200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -156,20 +144,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cb6e9707f261e38f0800000000000000
-      internalID: -558984910741051716
+      spriteID: bdaf0a4c80d5a0030800000000000000
+      internalID: 3461681555827653339
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: imas 1_2
+      name: magnets2_2
       rect:
         serializedVersion: 2
-        x: 1023
-        y: 810
-        width: 934
-        height: 657
+        x: 2400
+        y: 1200
+        width: 1200
+        height: 1200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -177,20 +165,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e8b7307a83a7fe1d0800000000000000
-      internalID: -3319300016609985650
+      spriteID: 89f47c1bcbc4eb1a0800000000000000
+      internalID: -6791906814707937384
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: imas 1_3
+      name: magnets2_3
       rect:
         serializedVersion: 2
-        x: 2095
-        y: 433
-        width: 728
-        height: 1018
+        x: 0
+        y: 0
+        width: 1200
+        height: 1200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -198,20 +186,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0a487f73ecabbf980800000000000000
-      internalID: -8503998076494052192
+      spriteID: 9501256ddb0c6dd20800000000000000
+      internalID: 3303039298299891801
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: imas 1_4
+      name: magnets2_4
       rect:
         serializedVersion: 2
-        x: 905
-        y: 12
-        width: 1180
-        height: 716
+        x: 1200
+        y: 0
+        width: 1200
+        height: 1200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -219,20 +207,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d94b490dcecb94a20800000000000000
-      internalID: 3047174348190561437
+      spriteID: b18b3389f323d0270800000000000000
+      internalID: 8218280143738877979
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: imas 1_5
+      name: magnets2_5
       rect:
         serializedVersion: 2
-        x: 6
-        y: 203
-        width: 846
-        height: 691
+        x: 2400
+        y: 0
+        width: 1200
+        height: 1200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -240,8 +228,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 33866131b8fd09950800000000000000
-      internalID: 6453904054435604531
+      spriteID: e0992cecd8a90a2b0800000000000000
+      internalID: -5575286404834748146
       vertices: []
       indices: 
       edges: []
