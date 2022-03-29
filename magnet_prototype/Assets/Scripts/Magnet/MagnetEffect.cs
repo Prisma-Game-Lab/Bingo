@@ -8,7 +8,7 @@ namespace MagnetGame
 		OMEN,
 		EXTRA_ATTACK,
 		RETURN_CARD,
-		DISCARD,
+		GUARANTEE,
 	}
 
 	public static class MagnetEffectExtensions
