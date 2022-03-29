@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57e5efdd0c4210b19bd73a6eed6fcd7c, type: 3}
   m_Name: samnple
   m_EditorClassIdentifier: 
-  opponentName: 
+  opponentName: safds
   scenarySprite: {fileID: 0}
   opponentSprite: {fileID: 0}
   opponentMagnetPool: []
