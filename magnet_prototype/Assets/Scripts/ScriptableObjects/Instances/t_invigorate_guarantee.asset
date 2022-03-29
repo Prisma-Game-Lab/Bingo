@@ -32,6 +32,6 @@ MonoBehaviour:
     m_LocalVariables: []
   type: 2
   effects: 0100000007000000
-  sprite: {fileID: -558984910741051716, guid: fa7aa3654583c49849eca4a52b767f93, type: 3}
+  sprite: {fileID: 5304217159734369214, guid: ae99c55a9c5004f99a68870812d252b6, type: 3}
   references:
     version: 1
