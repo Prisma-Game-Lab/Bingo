@@ -1,9 +1,10 @@
 namespace MagnetGame
 {
-	public class Vampiric : IMagnetEffect
+	public class Guarantee : IMagnetEffect
 	{
 		public void Effect(Player player, Player opponent, MagnetPile pile)
-			=> player.Heal();
+			=> player.Guarantee = 2;
+
 	}
 }
 

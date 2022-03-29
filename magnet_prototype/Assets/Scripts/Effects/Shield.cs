@@ -1,9 +1,9 @@
 namespace MagnetGame
 {
-	public class Vampiric : IMagnetEffect
+	public class Shield : IMagnetEffect
 	{
 		public void Effect(Player player, Player opponent, MagnetPile pile)
-			=> player.Heal();
+			=> player.Shield = 2;
 	}
 }
 

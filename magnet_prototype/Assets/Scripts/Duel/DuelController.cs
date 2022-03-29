@@ -159,7 +159,19 @@ namespace MagnetGame
 
 			playerEffectSelection.SetActive(false);
 
-			switch (playerMagnet.type.Compare(aiMagnet.type)) {
+			Result result = playerMagnet.type.Compare(aiMagnet.type);
+
+			if (player.Guarantee > 0) {
+				if (result < Result.WIN)
+					++result;
+				player.Guarantee = 0;
+			} else if (ai.Guarantee > 0) {
+				if (result > Result.LOSE)
+					--result;
+				ai.Guarantee = 0;
+			}
+
+			switch (result) {
 				case Result.WIN:
 					roundResultText.GetComponent<LocalizeStringEvent>()
 						.StringReference.SetReference("UI", "round_victory");
@@ -194,6 +206,9 @@ namespace MagnetGame
 
 			pile.Discard(playerMagnet);
 			pile.Discard(aiMagnet);
+
+			player.TryClearEffects();
+			ai.TryClearEffects();
 
 			selectedMagnet.IsSelected = false;
 

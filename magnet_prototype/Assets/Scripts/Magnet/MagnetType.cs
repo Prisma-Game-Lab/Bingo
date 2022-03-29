@@ -2,7 +2,7 @@ using System;
 
 namespace MagnetGame
 {
-	public enum Result { WIN, LOSE, DRAW, }
+	public enum Result { LOSE, DRAW, WIN, }
 	public enum MagnetType { SERVICES, ANNIVERSARIES, TOURISM, }
 
 	public static class MagnetTypeExtensions
