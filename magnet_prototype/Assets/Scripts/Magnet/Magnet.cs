@@ -72,6 +72,7 @@ namespace MagnetGame
 			type = magnetStats.type;
 			title = magnetStats.title;
 			description = magnetStats.description;
+			graphics.GetComponent<SpriteRenderer>().sprite = magnetStats.sprite;
 		}
 
 		public void OnPointerClick(PointerEventData eventData) {
