@@ -259,32 +259,33 @@ namespace MagnetGame
 			ai.Choice = null;
 
 			if (selectedMagnet != null) {
-				if (player.Hand.Count < 3 && ai.Hand.Count < 3) {
-					MagnetSO[] magnets = new MagnetSO[2];
+				MagnetSO[] magnets = new MagnetSO[2];
 
-					magnets[0] = pile.Draw();
-					magnets[1] = pile.Draw();
+				magnets[0] = pile.Draw();
+				magnets[1] = pile.Draw();
 
-					if (playerChooses) {
-						cardPair.SetActive(true);
+				if (playerChooses) {
+					cardPair.SetActive(true);
 
-						foreach (var magnet in magnetPairGO)
-							magnet.GetComponent<Magnet>().isSelectable = true;
+					foreach (var magnet in magnetPairGO)
+						magnet.GetComponent<Magnet>().isSelectable = true;
 
-						magnetPairGO[0].GetComponent<Magnet>().MagnetStats = magnets[0];
-						magnetPairGO[1].GetComponent<Magnet>().MagnetStats = magnets[1];
-					} else {
-						ai.AddToHand(magnets[1]);
-						PlayerDraws(magnets[0]);
-					}
+					magnetPairGO[0].GetComponent<Magnet>().MagnetStats = magnets[0];
+					magnetPairGO[1].GetComponent<Magnet>().MagnetStats = magnets[1];
 				} else {
-					while (ai.Hand.Count < 3)
-						ai.AddToHand(pile.Draw());
-
-					while (player.Hand.Count < 3)
-						player.AddToHand(pile.Draw());
+					ai.AddToHand(magnets[1]);
+					PlayerDraws(magnets[0]);
 				}
+
 			}
+
+			while (ai.Hand.Count < 3)
+				ai.AddToHand(pile.Draw());
+
+			while (player.Hand.Count < 3)
+				player.AddToHand(pile.Draw());
+
+			playerChooses = !playerChooses;
 		}
 
 		public void PlayerDraws(MagnetSO magnet) {
@@ -292,8 +293,6 @@ namespace MagnetGame
 			magnetGO[selectedMagnet].SetActive(true);
 			selectedMagnet.MagnetStats = magnet;
 			selectedMagnet = null;
-
-			playerChooses = !playerChooses;
 
 			duelStateManager.CurrentDuelState = DuelState.ROUND_START;
 		}
