@@ -19,7 +19,39 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 9890177024
-    m_Localized: Cura 1 HP.
+    m_Localized: Recupera 1 ponto de vida.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1502334611632128
+    m_Localized: "No pr\xF3ximo turno, voc\xEA fica imune aos efeitos do \xEDm\xE3
+      do oponente."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1502339225366528
+    m_Localized: "D\xE1 1 de dano extra ao oponente."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1502772601827328
+    m_Localized: "No pr\xF3ximo turno, transforma uma derrota em empate ou um empate
+      em vit\xF3ria."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1502791891431424
+    m_Localized: "Descarte sua m\xE3o e compre tr\xEAs novos \xEDm\xE3s. Voc\xEA
+      n\xE3o puxa \xEDm\xE3s neste turno."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1502806273699840
+    m_Localized: "Veja a m\xE3o do oponente."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1502818634313728
+    m_Localized: "Ap\xF3s utilizado, o \xEDm\xE3 retorna a sua m\xE3o. Voc\xEA n\xE3o
+      puxa \xEDm\xE3s neste turno."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1502833314377728
+    m_Localized: "No pr\xF3ximo turno, recebe uma armadura que reduz 1 de dano recebido."
     m_Metadata:
       m_Items: []
   references:
