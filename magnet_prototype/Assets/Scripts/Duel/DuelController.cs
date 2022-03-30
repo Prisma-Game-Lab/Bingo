@@ -22,6 +22,7 @@ namespace MagnetGame
 
 		private bool playerChooses = true;
 		private bool omen = false;
+		private bool returnCard = false;
 		private Magnet selectedMagnet = null;
 		private int selectedEffect = 0;
 
@@ -102,6 +103,13 @@ namespace MagnetGame
 			foreach (var magnet in magnetPairGO)
 				magnet.GetComponent<Magnet>().isSelectable = false;
 
+			Debug.Log("-- AI --");
+			foreach (var magnet in ai.Hand)
+				Debug.Log(magnet.name);
+			Debug.Log("\n-- Player --");
+			foreach (var magnet in player.Hand)
+				Debug.Log(magnet.name);
+
 			cardPair.SetActive(false);
 
 			duelStateManager.CurrentDuelState = DuelState.ROUND_CHOICE;
@@ -129,9 +137,16 @@ namespace MagnetGame
 					break;
 
 				case DuelState.ROUND_DRAW:
-					PlayerDraws(magnet.GetComponent<Magnet>().MagnetStats);
+					if (magnetPairGO[0].GetComponent<Magnet>() == magnet) {
+						ai.AddToHand(magnetPairGO[1].GetComponent<Magnet>().MagnetStats);
+					} else
+						ai.AddToHand(magnetPairGO[0].GetComponent<Magnet>().MagnetStats);
+
 					magnet.IsSelected = false;
 					cardPair.SetActive(false);
+
+					PlayerDraws(magnet.GetComponent<Magnet>().MagnetStats);
+
 					break;
 
 				default:
@@ -186,6 +201,12 @@ namespace MagnetGame
 						playerMagnet.effects[selectedEffect].GetScript().Effect(player, ai, pile);
 					else
 						omen = true;
+
+					if (playerMagnet.effects[selectedEffect] == MagnetEffect.INVIGORATE)
+						for (int i = 0; i < player.Hand.Count; ++i)
+							magnetsGO[i].GetComponent<Magnet>().MagnetStats = player.Hand[i];
+					else if (playerMagnet.effects[selectedEffect] == MagnetEffect.RETURN_CARD)
+						returnCard = true;
 					break;
 
 				case Result.LOSE:
@@ -255,10 +276,11 @@ namespace MagnetGame
 
 		private void RoundDraw() {
 
-			player.Choice = null;
-			ai.Choice = null;
-
-			if (selectedMagnet != null) {
+			if (returnCard) {
+				PlayerDraws(player.Choice);
+				ai.AddToHand(pile.Draw());
+				returnCard = false;
+			} if (selectedMagnet != null) {
 				MagnetSO[] magnets = new MagnetSO[2];
 
 				magnets[0] = pile.Draw();
@@ -279,11 +301,8 @@ namespace MagnetGame
 
 			}
 
-			while (ai.Hand.Count < 3)
-				ai.AddToHand(pile.Draw());
-
-			while (player.Hand.Count < 3)
-				player.AddToHand(pile.Draw());
+			player.Choice = null;
+			ai.Choice = null;
 
 			playerChooses = !playerChooses;
 		}
