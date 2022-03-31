@@ -48,14 +48,12 @@ public class AudioManager : MonoBehaviour
     {
         
         Sound s = Array.Find(sounds, sound => sound.name == name);
-        print($"toca som: {s.name}");
         if (s != null)
         {
             s.source.Play();
             return;
         }
         s.source.Play();
-        print($"toca som: {s.name}");
     }
 
     public void Stop(string name)
