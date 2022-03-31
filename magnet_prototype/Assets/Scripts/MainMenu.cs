@@ -8,12 +8,14 @@ public class MainMenu : MonoBehaviour
 
     public void PlayGame ()
     {
+        AudioManager.instance.Play("botao_entra");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void QuitGame () 
     {
         //Debug.Log ("Quit");
+        AudioManager.instance.Play("botao_sair");
         Application.Quit();
     }
 
