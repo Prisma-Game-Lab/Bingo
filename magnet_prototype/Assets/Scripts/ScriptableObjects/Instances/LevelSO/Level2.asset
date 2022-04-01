@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Level2
   m_EditorClassIdentifier: 
   opponentName: Op2
-  scenarySprite: {fileID: 0}
+  scenarySprite: {fileID: 21300000, guid: 4668cef923a922e4b8e713a1fe5dc568, type: 3}
   opponentSprite: {fileID: 0}
