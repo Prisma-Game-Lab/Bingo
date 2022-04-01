@@ -55,25 +55,27 @@ namespace MagnetGame {
 
 		private void OnAIDamaged(int health) {
 			if (health <= 0) {
+				aiHP.text = "0/" + aiController.maxHealth;
+
 				if (currentLevel >= levels.Count) {
 					SceneManager.LoadScene("VictoryScene");
 				} else {
+					++playerController.maxHealth;
+					++aiController.maxHealth;
 					playerController.AddToMagnets(aiController.Magnets);
 					LoadLevel(++currentLevel);
 				}
-
-				aiHP.text = "0/3";
 			} else {
-				aiHP.text = aiController.Health + "/3";
+				aiHP.text = aiController.Health + "/" + aiController.maxHealth;
 			}
 		}
 
 		private void OnPlayerDamaged(int health) {
 			if (health <= 0) {
-				playerHP.text = "0/3";
+				playerHP.text = "0/" + playerController.maxHealth;
 				SceneManager.LoadScene("DefeatScene");
 			} else {
-				playerHP.text = playerController.Health + "/3";
+				playerHP.text = playerController.Health + "/" + playerController.maxHealth;
 			}
 		}
 

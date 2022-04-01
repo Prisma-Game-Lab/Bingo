@@ -5,11 +5,14 @@ namespace MagnetGame
 {
 	public class Player : MonoBehaviour
 	{
+		private const int defaultMaxHealth = 4;
+
 		[SerializeField] private List<MagnetSO> defaultMagnets;
 
 		private List<MagnetSO> magnets = new List<MagnetSO>();
 		private List<MagnetSO> hand = new List<MagnetSO>();
-		private int health = 3;
+		private int health = defaultMaxHealth;
+		public int maxHealth = defaultMaxHealth;
 
 		public List<MagnetSO> Magnets { get => magnets; }
 		public List<MagnetSO> Hand { get => hand; }
@@ -28,7 +31,7 @@ namespace MagnetGame
 		}
 
 		public void Reset() {
-			health = 3;
+			health = maxHealth;
 			OnPlayerHealthChanged?.Invoke(health);
 			hand.Clear();
 			Shield = 0;
@@ -59,8 +62,8 @@ namespace MagnetGame
 		public void Heal(int heal = 1) {
 			health += heal;
 
-			if (health > 3)
-				health = 3;
+			if (health > maxHealth)
+				health = maxHealth;
 
 			OnPlayerHealthChanged?.Invoke(health);
 		}
