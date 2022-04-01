@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
 
@@ -12,8 +13,8 @@ namespace MagnetGame {
 		[SerializeField] private DuelStateManager duelStateManager;
 		[SerializeField] private PlayerController playerController;
 		[SerializeField] private AIController aiController;
-		[SerializeField] private SpriteRenderer scenary;
-		[SerializeField] private SpriteRenderer opponent;
+		[SerializeField] private Image scenary;
+		[SerializeField] private Image opponent;
 		[SerializeField] private TextMeshProUGUI playerHP;
 		[SerializeField] private TextMeshProUGUI aiHP;
 
