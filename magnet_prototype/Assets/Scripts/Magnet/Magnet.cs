@@ -98,14 +98,18 @@ namespace MagnetGame
 		public void OnPointerEnter(PointerEventData eventData) {
 			if (!isSelectable)
 				return;
+
+			AudioManager.instance.Play("card_pop_up");
 			graphics.transform.localPosition = selectedPos;
 		}
 
 		public void OnPointerExit(PointerEventData eventData) {
 			if (!isSelectable)
 				return;
-			if (!isSelected)
+			if (!isSelected) {
+				AudioManager.instance.Play("card_pop_down");
 				graphics.transform.localPosition = Vector3.zero;
+			}
 		}
 
 		private void UpdateTitleString(string s) => cardTitleTMP.SetText(s);
