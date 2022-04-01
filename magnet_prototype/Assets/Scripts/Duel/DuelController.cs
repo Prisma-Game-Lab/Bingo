@@ -161,7 +161,9 @@ namespace MagnetGame
 			duelStateManager.CurrentDuelState = DuelState.ROUND_PLAY;
 		}
 
+		// TODO: Find out why this method is being called twice
 		private void RoundChoice() {
+			if (ai.Choice != null) return;
 			ai.Choice = ai.ChoosePlay();
 		}
 

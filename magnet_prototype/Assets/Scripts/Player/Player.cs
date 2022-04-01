@@ -29,6 +29,7 @@ namespace MagnetGame
 
 		public void Reset() {
 			health = 3;
+			OnPlayerHealthChanged?.Invoke(health);
 			hand.Clear();
 			Shield = 0;
 			Guarantee = 0;

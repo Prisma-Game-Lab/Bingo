@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 namespace MagnetGame {
 	public class CampaignController : MonoBehaviour
@@ -13,6 +14,8 @@ namespace MagnetGame {
 		[SerializeField] private AIController aiController;
 		[SerializeField] private SpriteRenderer scenary;
 		[SerializeField] private SpriteRenderer opponent;
+		[SerializeField] private TextMeshProUGUI playerHP;
+		[SerializeField] private TextMeshProUGUI aiHP;
 
 		private List<MagnetSO>[] defaultMagnetStocks;
 		private int currentLevel = 1;
@@ -58,12 +61,20 @@ namespace MagnetGame {
 					playerController.AddToMagnets(aiController.Magnets);
 					LoadLevel(++currentLevel);
 				}
+
+				aiHP.text = "0/3";
+			} else {
+				aiHP.text = aiController.Health + "/3";
 			}
 		}
 
 		private void OnPlayerDamaged(int health) {
-			if (health <= 0)
+			if (health <= 0) {
+				playerHP.text = "0/3";
 				SceneManager.LoadScene("DefeatScene");
+			} else {
+				playerHP.text = playerController.Health + "/3";
+			}
 		}
 
 		private void LoadLevel(int idx) {
