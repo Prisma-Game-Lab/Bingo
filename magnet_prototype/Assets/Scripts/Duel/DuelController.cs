@@ -202,11 +202,12 @@ namespace MagnetGame
 					else
 						omen = true;
 
-					if (playerMagnet.effects[selectedEffect] == MagnetEffect.INVIGORATE)
+					if (playerMagnet.effects[selectedEffect] == MagnetEffect.INVIGORATE) {
 						for (int i = 0; i < player.Hand.Count; ++i)
 							magnetsGO[i].GetComponent<Magnet>().MagnetStats = player.Hand[i];
-					else if (playerMagnet.effects[selectedEffect] == MagnetEffect.RETURN_CARD)
+					} else if (playerMagnet.effects[selectedEffect] == MagnetEffect.RETURN_CARD) {
 						returnCard = true;
+					}
 					break;
 
 				case Result.LOSE:
@@ -280,7 +281,7 @@ namespace MagnetGame
 				PlayerDraws(player.Choice);
 				ai.AddToHand(pile.Draw());
 				returnCard = false;
-			} if (selectedMagnet != null) {
+			} else if (selectedMagnet != null) {
 				MagnetSO[] magnets = new MagnetSO[2];
 
 				magnets[0] = pile.Draw();
