@@ -31,7 +31,7 @@ MonoBehaviour:
     m_WaitForCompletion: 0
     m_LocalVariables: []
   type: 1
-  effects: 0100000007000000
+  effects: 0100000004000000
   sprite: {fileID: -1142386106493884527, guid: 98bab3dede3054046b8797ba57dd688e, type: 3}
   references:
     version: 1
