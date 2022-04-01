@@ -32,6 +32,11 @@ namespace MagnetGame
 		public void Discard(List<MagnetSO> magnets)
 			=> magnets.ForEach(Discard);
 
+		public void Clear() {
+			stock.Clear();
+			wastepile.Clear();
+		}
+
 		private static void InsertRand<T>(List<T> list, T element)
 			=> list.Insert(Random.Range(0, list.Count), element);
 

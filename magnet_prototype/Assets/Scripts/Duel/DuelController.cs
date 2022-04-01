@@ -34,14 +34,12 @@ namespace MagnetGame
 
 			foreach (var magnet in magnetsGO)
 				magnetGO.Add(magnet.GetComponent<Magnet>(), magnet);
-
 		}
 
 		private void Start() {
 			resultUI.SetActive(false);
 			cardPair.SetActive(false);
 			playerEffectSelection.SetActive(false);
-			duelStateManager.SetupDuel();
 		}
 
 		private void OnDestroy() {
@@ -82,6 +80,7 @@ namespace MagnetGame
 		}
 
 		private void RoundSetup() {
+			pile.Clear();
 			pile.AddToStock(player.Magnets);
 			pile.AddToStock(ai.Magnets);
 
@@ -102,13 +101,6 @@ namespace MagnetGame
 		private void RoundStart() {
 			foreach (var magnet in magnetPairGO)
 				magnet.GetComponent<Magnet>().isSelectable = false;
-
-			Debug.Log("-- AI --");
-			foreach (var magnet in ai.Hand)
-				Debug.Log(magnet.name);
-			Debug.Log("\n-- Player --");
-			foreach (var magnet in player.Hand)
-				Debug.Log(magnet.name);
 
 			cardPair.SetActive(false);
 
@@ -281,6 +273,13 @@ namespace MagnetGame
 				PlayerDraws(player.Choice);
 				ai.AddToHand(pile.Draw());
 				returnCard = false;
+
+				player.Choice = null;
+				ai.Choice = null;
+
+				playerChooses = !playerChooses;
+
+				duelStateManager.CurrentDuelState = DuelState.ROUND_START;
 			} else if (selectedMagnet != null) {
 				MagnetSO[] magnets = new MagnetSO[2];
 
@@ -295,17 +294,24 @@ namespace MagnetGame
 
 					magnetPairGO[0].GetComponent<Magnet>().MagnetStats = magnets[0];
 					magnetPairGO[1].GetComponent<Magnet>().MagnetStats = magnets[1];
+
+					player.Choice = null;
+					ai.Choice = null;
+
+					playerChooses = !playerChooses;
 				} else {
 					ai.AddToHand(magnets[1]);
 					PlayerDraws(magnets[0]);
+
+					player.Choice = null;
+					ai.Choice = null;
+
+					playerChooses = !playerChooses;
+
+					duelStateManager.CurrentDuelState = DuelState.ROUND_START;
 				}
 
 			}
-
-			player.Choice = null;
-			ai.Choice = null;
-
-			playerChooses = !playerChooses;
 		}
 
 		public void PlayerDraws(MagnetSO magnet) {

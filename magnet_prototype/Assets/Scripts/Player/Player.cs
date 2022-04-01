@@ -19,6 +19,22 @@ namespace MagnetGame
 		public int Guarantee { get; set; }
 		public int CounterSpell { get; set; }
 
+		public delegate void PlayerHealthChangedHandler(int health);
+		public event PlayerHealthChangedHandler OnPlayerHealthChanged;
+
+		public void Reset(List<MagnetSO> magnets) {
+			this.magnets = magnets;
+			Reset();
+		}
+
+		public void Reset() {
+			health = 3;
+			hand.Clear();
+			Shield = 0;
+			Guarantee = 0;
+			CounterSpell = 0;
+		}
+
 		public void AddToMagnets(List<MagnetSO> magnets) => this.magnets.AddRange(magnets);
 		public void AddToMagnets(MagnetSO magnet) => magnets.Add(magnet);
 
@@ -34,6 +50,8 @@ namespace MagnetGame
 			else
 				health -= damage;
 
+			OnPlayerHealthChanged?.Invoke(health);
+
 			return health <= 0;
 		}
 
@@ -42,6 +60,8 @@ namespace MagnetGame
 
 			if (health > 3)
 				health = 3;
+
+			OnPlayerHealthChanged?.Invoke(health);
 		}
 
 		public void TryClearEffects() {

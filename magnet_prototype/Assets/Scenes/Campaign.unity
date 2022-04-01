@@ -372,6 +372,74 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d46400007ac4c16b7bf8d3cb03aa7389, type: 3}
+--- !u!1 &236188628
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 236188629}
+  - component: {fileID: 236188630}
+  m_Layer: 0
+  m_Name: CampaignController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &236188629
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 236188628}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 762856973}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &236188630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 236188628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf00b0cbf37fafadea4080cf8e748d92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <magnets>k__BackingField:
+  - {fileID: 11400000, guid: f3e77b6d202b62c4aaee48925b70fb9f, type: 2}
+  - {fileID: 11400000, guid: 93763cecceffea741ad8d852e0f4fdb8, type: 2}
+  - {fileID: 11400000, guid: c7069a74b8efeb641ab79a45a68d871d, type: 2}
+  - {fileID: 11400000, guid: ed5ef127c97ba2548b12c6315e813f84, type: 2}
+  - {fileID: 11400000, guid: 9993de355908ceb4c9b631af914ba1ad, type: 2}
+  - {fileID: 11400000, guid: 2808d2f2dc01e1441990d4c9f318cca2, type: 2}
+  - {fileID: 11400000, guid: 523f14fd04f9cc14ca17f0e7543fe76f, type: 2}
+  - {fileID: 11400000, guid: ac5314b6b5195044bb26c353c26e5701, type: 2}
+  - {fileID: 11400000, guid: 3df68208a5f6040438be0c995f4c4c65, type: 2}
+  - {fileID: 11400000, guid: b6636e3f7febcb548ae1686b4f499894, type: 2}
+  - {fileID: 11400000, guid: f37be36ea5da59e48b4beda3b099e33d, type: 2}
+  - {fileID: 11400000, guid: e7d2abcb8aaafd845a2a2f0c2695456c, type: 2}
+  - {fileID: 11400000, guid: f0b1114e13eb0de4b9cab148187997de, type: 2}
+  - {fileID: 11400000, guid: 122c0d41499f9e543b570ca136fe526f, type: 2}
+  - {fileID: 11400000, guid: e593bac8ed34c374b9ed76ebdd64b846, type: 2}
+  - {fileID: 11400000, guid: 8b668588c328f5944b5d0664751e39d2, type: 2}
+  - {fileID: 11400000, guid: 7a7c50438b35d014689a6ad806bf1e98, type: 2}
+  - {fileID: 11400000, guid: afa3ec6f662c84d44b6338ec12018dd3, type: 2}
+  <levels>k__BackingField: []
+  duelStateManager: {fileID: 630394854}
+  playerController: {fileID: 88978490}
+  aiController: {fileID: 508112824}
+  scenary: {fileID: 0}
+  opponent: {fileID: 0}
 --- !u!1001 &363625037
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1364,6 +1432,7 @@ Transform:
   - {fileID: 88978489}
   - {fileID: 508112823}
   - {fileID: 844294428}
+  - {fileID: 236188629}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
