@@ -202,6 +202,9 @@ namespace MagnetGame
 					} else if (playerMagnet.effects[selectedEffect] == MagnetEffect.RETURN_CARD) {
 						returnCard = true;
 					}
+
+					AudioManager.instance.Play("win");
+
 					break;
 
 				case Result.LOSE:
@@ -211,6 +214,9 @@ namespace MagnetGame
 
 					player.Damage();
 					aiMagnet.effects[0].GetScript().Effect(ai, player, pile);
+
+					AudioManager.instance.Play("lose");
+
 					break;
 
 				case Result.DRAW:
