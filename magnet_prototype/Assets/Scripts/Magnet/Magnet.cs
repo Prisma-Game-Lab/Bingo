@@ -1,4 +1,4 @@
-using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Localization;
@@ -12,10 +12,16 @@ namespace MagnetGame
 	{
 		private static readonly Vector3 selectedPos = new Vector3(0.0f, 0.3f, 0.0f);
 
+		private static Dictionary<MagnetType, Sprite> typeSpritesDict = null;
+
 		[SerializeField] private MagnetSO magnetStats;
 		[SerializeField] private TextMeshPro cardTitleTMP;
 		[SerializeField] private TextMeshPro cardDescriptionTMP;
 		[SerializeField] private GameObject graphics;
+		[SerializeField] private SpriteRenderer typeIcon;
+		[SerializeField] private SpriteRenderer[] effectIcon;
+
+		[SerializeField] private Sprite[] typeSprites;
 
 		[field: SerializeField] public MagnetType type { get; private set; }
 
@@ -49,6 +55,13 @@ namespace MagnetGame
 		}
 
 		private void Awake() {
+			if (typeSpritesDict == null) {
+				typeSpritesDict = new Dictionary<MagnetType, Sprite>();
+				typeSpritesDict.Add(MagnetType.ANNIVERSARIES, typeSprites[0]);
+				typeSpritesDict.Add(MagnetType.SERVICES, typeSprites[1]);
+				typeSpritesDict.Add(MagnetType.TOURISM, typeSprites[2]);
+			}
+
 			if (magnetStats != null) UpdateMagnetSO();
 		}
 
@@ -73,6 +86,7 @@ namespace MagnetGame
 			title = magnetStats.title;
 			description = magnetStats.description;
 			graphics.GetComponent<SpriteRenderer>().sprite = magnetStats.sprite;
+			typeIcon.sprite = typeSpritesDict[type];
 		}
 
 		public void OnPointerClick(PointerEventData eventData) {
