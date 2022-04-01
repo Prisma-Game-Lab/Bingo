@@ -19,6 +19,34 @@ MonoBehaviour:
     m_Key: vampiric
     m_Metadata:
       m_Items: []
+  - m_Id: 2305884831096832
+    m_Key: counterspell
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2305986391973888
+    m_Key: extra_attack
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2306072589115392
+    m_Key: guarantee
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2306128381747200
+    m_Key: invigorate
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2306191078203392
+    m_Key: omen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2306265619374080
+    m_Key: return_card
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2306315271544832
+    m_Key: shield
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

@@ -22,5 +22,33 @@ MonoBehaviour:
     m_Localized: "Vamp\xEDrico"
     m_Metadata:
       m_Items: []
+  - m_Id: 2305884831096832
+    m_Localized: "Contrafeiti\xE7o"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2305986391973888
+    m_Localized: Ataque Extra
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2306072589115392
+    m_Localized: Garantia
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2306128381747200
+    m_Localized: Reinvigorar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2306191078203392
+    m_Localized: "Press\xE1gio"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2306265619374080
+    m_Localized: Carta Retornante
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2306315271544832
+    m_Localized: Escudo
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

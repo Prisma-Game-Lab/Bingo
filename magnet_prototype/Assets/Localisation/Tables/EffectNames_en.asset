@@ -22,5 +22,33 @@ MonoBehaviour:
     m_Localized: Vampiric
     m_Metadata:
       m_Items: []
+  - m_Id: 2305884831096832
+    m_Localized: Counterspell
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2305986391973888
+    m_Localized: Extra Attack
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2306072589115392
+    m_Localized: Guarantee
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2306128381747200
+    m_Localized: Invigorate
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2306191078203392
+    m_Localized: Omen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2306265619374080
+    m_Localized: Return Card
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2306315271544832
+    m_Localized: Shield
+    m_Metadata:
+      m_Items: []
   references:
     version: 1
