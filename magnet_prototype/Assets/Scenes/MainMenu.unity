@@ -3149,7 +3149,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "<b>Programa\xE7\xE3o</b>\nRafael Carvalho\n\n<b>Sonoriza\xE7\xE3o</b>\nVitor
-    Salek\n\n<b>Equipe de divulga\xE7\xE3o da Prisma Game Lab</b>\nErick Numberger\r\nLuca
+    Salek\n\n<b>Equipe de divulga\xE7\xE3o da Prisma Game Lab</b>\nErick Nurmberger\r\nLuca
     Fernandes\r\nTiago Ribeiro"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: db4ce9fe4fe07594b837beef1063692d, type: 2}
