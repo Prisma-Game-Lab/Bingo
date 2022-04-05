@@ -6,8 +6,6 @@ using TMPro;
 
 namespace MagnetGame
 {
-
-	// TODO: Implement effects
 	public class Magnet : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
 	{
 		private static readonly Vector3 selectedPos = new Vector3(0.0f, 0.3f, 0.0f);

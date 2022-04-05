@@ -137,6 +137,10 @@ namespace MagnetGame
 					magnet.IsSelected = false;
 					cardPair.SetActive(false);
 
+
+					foreach (var m in magnetsGO)
+						m.GetComponent<Magnet>().isSelectable = true;
+
 					PlayerDraws(magnet.GetComponent<Magnet>().MagnetStats);
 
 					break;
@@ -299,6 +303,9 @@ namespace MagnetGame
 
 					foreach (var magnet in magnetPairGO)
 						magnet.GetComponent<Magnet>().isSelectable = true;
+
+					foreach (var magnet in magnetsGO)
+						magnet.GetComponent<Magnet>().isSelectable = false;
 
 					magnetPairGO[0].GetComponent<Magnet>().MagnetStats = magnets[0];
 					magnetPairGO[1].GetComponent<Magnet>().MagnetStats = magnets[1];
