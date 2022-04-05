@@ -12,7 +12,7 @@ namespace MagnetGame
 		private List<MagnetSO> magnets = new List<MagnetSO>();
 		private List<MagnetSO> hand = new List<MagnetSO>();
 		private int health = defaultMaxHealth;
-		public int maxHealth = defaultMaxHealth;
+		public int maxHealth { get; set; }
 
 		public List<MagnetSO> Magnets { get => magnets; }
 		public List<MagnetSO> Hand { get => hand; }
@@ -75,6 +75,7 @@ namespace MagnetGame
 		}
 
 		private void Awake() {
+			maxHealth = defaultMaxHealth;
 			if (defaultMagnets.Count > 0)
 				AddToMagnets(defaultMagnets);
 		}
