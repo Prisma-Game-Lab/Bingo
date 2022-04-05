@@ -24,8 +24,6 @@ public class AudioManager : MonoBehaviour
         if (PlayerPrefs.GetInt("FirstGame") == 0)
         {
             PlayerPrefs.SetFloat("MasterSoundPrefs", 100f);
-            PlayerPrefs.SetFloat("BackgroundPrefs", 100f);
-            PlayerPrefs.SetFloat("SoundEffectsPrefs", 100f);
             PlayerPrefs.SetInt("FirstGame", 1);
         }
 
@@ -33,7 +31,7 @@ public class AudioManager : MonoBehaviour
         {
             s.source = gameObject.AddComponent<AudioSource>();
             s.source.clip = s.clip;
-            s.source.volume = PlayerPrefs.GetFloat("BackgroundPrefs") * 0.01f * PlayerPrefs.GetFloat("MasterSoundPrefs") * 0.01f;
+            s.source.volume = PlayerPrefs.GetFloat("MasterSoundPrefs") * 0.01f;
             s.source.pitch = s.pitch;
             s.source.loop = s.loop;
         }
@@ -76,6 +74,6 @@ public class AudioManager : MonoBehaviour
     public void UpdateSoundVolumes()
     {
         foreach (Sound s in sounds)
-            s.source.volume = PlayerPrefs.GetFloat("BackgroundPrefs") * PlayerPrefs.GetFloat("MasterSoundPrefs") * 0.0001f;
+            s.source.volume = PlayerPrefs.GetFloat("MasterSoundPrefs");
     }
 }
