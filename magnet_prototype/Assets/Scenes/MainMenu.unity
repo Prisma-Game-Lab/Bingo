@@ -1672,7 +1672,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "<b>Produ\xE7\xE3o</b>\nGustavo Camerano\n\n<b>Arte</b>\nClarissa Turela\nDavi
-    (?)\nMabi\nToni (?)\n\n<b>Game Design</b>\nHugo Tonette\nLuca Salgado"
+    Feitoza Rohem\nMabi\nToni \"Toniteu\" Soares\n\n<b>Game Design</b>\nHugo Tonette\nLuca
+    Salgado"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: db4ce9fe4fe07594b837beef1063692d, type: 2}
   m_sharedMaterial: {fileID: 3718122706046371110, guid: db4ce9fe4fe07594b837beef1063692d, type: 2}
