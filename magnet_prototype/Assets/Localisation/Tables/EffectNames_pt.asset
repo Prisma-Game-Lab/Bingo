@@ -27,7 +27,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 2305986391973888
-    m_Localized: Ataque Extra
+    m_Localized: Dobradinha
     m_Metadata:
       m_Items: []
   - m_Id: 2306072589115392
@@ -35,7 +35,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 2306128381747200
-    m_Localized: Reinvigorar
+    m_Localized: Revigorar
     m_Metadata:
       m_Items: []
   - m_Id: 2306191078203392
@@ -43,7 +43,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 2306265619374080
-    m_Localized: Carta Retornante
+    m_Localized: Bumerangue
     m_Metadata:
       m_Items: []
   - m_Id: 2306315271544832

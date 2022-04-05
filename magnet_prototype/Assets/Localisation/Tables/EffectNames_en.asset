@@ -31,7 +31,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 2306072589115392
-    m_Localized: Guarantee
+    m_Localized: Warranty
     m_Metadata:
       m_Items: []
   - m_Id: 2306128381747200
@@ -43,7 +43,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 2306265619374080
-    m_Localized: Return Card
+    m_Localized: Boomerang
     m_Metadata:
       m_Items: []
   - m_Id: 2306315271544832
