@@ -39,7 +39,12 @@ namespace MagnetGame
 		public bool isSelectable = true;
 
 		public delegate void MagnetClickedEvent(Magnet source);
+		public delegate void MagnetHoveredEvent(MagnetSO source);
+		public delegate void MagnetExitedEvent();
+
 		public static event MagnetClickedEvent OnMagnetClicked;
+		public static event MagnetHoveredEvent OnMagnetHovered;
+		public static event MagnetExitedEvent OnMagnetExited;
 
 		public MagnetSO MagnetStats {
 			get => magnetStats;
@@ -94,6 +99,8 @@ namespace MagnetGame
 		}
 
 		public void OnPointerEnter(PointerEventData eventData) {
+			OnMagnetHovered?.Invoke(this.MagnetStats);
+
 			if (!isSelectable)
 				return;
 
@@ -102,6 +109,8 @@ namespace MagnetGame
 		}
 
 		public void OnPointerExit(PointerEventData eventData) {
+			OnMagnetExited?.Invoke();
+
 			if (!isSelectable)
 				return;
 			if (!isSelected) {
