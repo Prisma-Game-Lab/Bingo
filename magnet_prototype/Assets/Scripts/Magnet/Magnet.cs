@@ -93,12 +93,16 @@ namespace MagnetGame
 		}
 
 		public void OnPointerClick(PointerEventData eventData) {
-			if (!isSelectable)
+			if (!isSelectable || GameStateManager.IsPaused())
 				return;
+
 			OnMagnetClicked?.Invoke(this);
 		}
 
 		public void OnPointerEnter(PointerEventData eventData) {
+			if (GameStateManager.IsPaused())
+				return;
+
 			OnMagnetHovered?.Invoke(this.MagnetStats);
 
 			if (!isSelectable)
