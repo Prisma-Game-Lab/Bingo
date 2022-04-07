@@ -118,8 +118,10 @@ namespace MagnetGame
 			if (!isSelectable)
 				return;
 			if (!isSelected) {
-				AudioManager.instance.Play("card_pop_down");
 				graphics.transform.localPosition = Vector3.zero;
+				if (GameStateManager.IsPaused())
+					return;
+				AudioManager.instance.Play("card_pop_down");
 			}
 		}
 
