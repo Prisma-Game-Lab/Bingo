@@ -27,6 +27,34 @@ MonoBehaviour:
     m_Key: round_lose
     m_Metadata:
       m_Items: []
+  - m_Id: 4986841006612480
+    m_Key: unpause_button
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4986913442242560
+    m_Key: mainmenu_button
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4987134314291200
+    m_Key: campaign_button
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4987182418763776
+    m_Key: options_button
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4987266346786816
+    m_Key: credits_button
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4987327390687232
+    m_Key: exit_button
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4987818002620416
+    m_Key: return_button
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

@@ -859,6 +859,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1426220559}
     m_Modifications:
+    - target: {fileID: 3294030167631878983, guid: 90b03ceecce244b49ae3a08124799346, type: 3}
+      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
+      value: 4987266346786816
+      objectReference: {fileID: 0}
+    - target: {fileID: 3294030167631878983, guid: 90b03ceecce244b49ae3a08124799346, type: 3}
+      propertyPath: m_StringReference.m_TableReference.m_TableCollectionName
+      value: GUID:7469a8d9e5cca780b90f2547cf11b4e0
+      objectReference: {fileID: 0}
     - target: {fileID: 7568684221269529217, guid: 90b03ceecce244b49ae3a08124799346, type: 3}
       propertyPath: m_text
       value: "Cr\xE9ditos"
@@ -1178,6 +1186,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1426220559}
     m_Modifications:
+    - target: {fileID: 3294030167631878983, guid: 90b03ceecce244b49ae3a08124799346, type: 3}
+      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
+      value: 4987182418763776
+      objectReference: {fileID: 0}
+    - target: {fileID: 3294030167631878983, guid: 90b03ceecce244b49ae3a08124799346, type: 3}
+      propertyPath: m_StringReference.m_TableReference.m_TableCollectionName
+      value: GUID:7469a8d9e5cca780b90f2547cf11b4e0
+      objectReference: {fileID: 0}
     - target: {fileID: 7568684221269529217, guid: 90b03ceecce244b49ae3a08124799346, type: 3}
       propertyPath: m_text
       value: "Op\xE7\xF5es"
@@ -4508,6 +4524,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1426220559}
     m_Modifications:
+    - target: {fileID: 3294030167631878983, guid: 90b03ceecce244b49ae3a08124799346, type: 3}
+      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
+      value: 4987327390687232
+      objectReference: {fileID: 0}
+    - target: {fileID: 3294030167631878983, guid: 90b03ceecce244b49ae3a08124799346, type: 3}
+      propertyPath: m_StringReference.m_TableReference.m_TableCollectionName
+      value: GUID:7469a8d9e5cca780b90f2547cf11b4e0
+      objectReference: {fileID: 0}
     - target: {fileID: 7568684221269529217, guid: 90b03ceecce244b49ae3a08124799346, type: 3}
       propertyPath: m_text
       value: Sair
@@ -4705,6 +4729,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1426220559}
     m_Modifications:
+    - target: {fileID: 3294030167631878983, guid: 90b03ceecce244b49ae3a08124799346, type: 3}
+      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
+      value: 4987134314291200
+      objectReference: {fileID: 0}
+    - target: {fileID: 3294030167631878983, guid: 90b03ceecce244b49ae3a08124799346, type: 3}
+      propertyPath: m_StringReference.m_TableReference.m_TableCollectionName
+      value: GUID:7469a8d9e5cca780b90f2547cf11b4e0
+      objectReference: {fileID: 0}
     - target: {fileID: 7568684221269529217, guid: 90b03ceecce244b49ae3a08124799346, type: 3}
       propertyPath: m_text
       value: Campanha

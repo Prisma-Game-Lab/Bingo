@@ -30,5 +30,33 @@ MonoBehaviour:
     m_Localized: You Lose
     m_Metadata:
       m_Items: []
+  - m_Id: 4986841006612480
+    m_Localized: Unpause
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4986913442242560
+    m_Localized: Main Menu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4987134314291200
+    m_Localized: Campaign
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4987182418763776
+    m_Localized: Options
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4987266346786816
+    m_Localized: Credits
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4987327390687232
+    m_Localized: Exit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4987818002620416
+    m_Localized: Return
+    m_Metadata:
+      m_Items: []
   references:
     version: 1
