@@ -17,6 +17,7 @@ namespace MagnetGame
 		[SerializeField] private GameObject cardPair;
 		[SerializeField] private GameObject resultUI;
 		[SerializeField] private GameObject roundResultText;
+		[SerializeField] private GameObject roundResultEffectText;
 
 		private Dictionary<Magnet, GameObject> magnetGO;
 
@@ -207,6 +208,10 @@ namespace MagnetGame
 						returnCard = true;
 					}
 
+					roundResultEffectText.GetComponent<LocalizeStringEvent>()
+							.StringReference
+							.SetReference("EffectNames", playerMagnet.effects[selectedEffect].GetLabel());
+
 					AudioManager.instance.Play("win");
 
 					break;
@@ -221,12 +226,19 @@ namespace MagnetGame
 
 					AudioManager.instance.Play("lose");
 
+
+					roundResultEffectText.GetComponent<LocalizeStringEvent>()
+							.StringReference
+							.SetReference("EffectNames", aiMagnet.effects[0].GetLabel());
+
 					break;
 
 				case Result.DRAW:
 					roundResultText.GetComponent<LocalizeStringEvent>()
 						.StringReference
 						.SetReference("UI", "round_draw");
+
+					roundResultEffectText.SetActive(false);
 					break;
 			}
 
@@ -254,6 +266,8 @@ namespace MagnetGame
 					&& duelStateManager.CurrentDuelState != DuelState.ROUND_OMEN)
 				return;
 
+			roundResultText.SetActive(true);
+			roundResultEffectText.SetActive(true);
 			resultUI.SetActive(false);
 			cardPair.SetActive(false);
 
@@ -269,6 +283,8 @@ namespace MagnetGame
 
 			resultUI.SetActive(true);
 			cardPair.SetActive(true);
+			roundResultText.SetActive(false);
+			roundResultEffectText.SetActive(false);
 
 			magnetPairGO[0].GetComponent<Magnet>().isSelectable = false;
 			magnetPairGO[1].GetComponent<Magnet>().isSelectable = false;

@@ -39,7 +39,12 @@ namespace MagnetGame
 		public bool isSelectable = true;
 
 		public delegate void MagnetClickedEvent(Magnet source);
+		public delegate void MagnetHoveredEvent(MagnetSO source);
+		public delegate void MagnetExitedEvent();
+
 		public static event MagnetClickedEvent OnMagnetClicked;
+		public static event MagnetHoveredEvent OnMagnetHovered;
+		public static event MagnetExitedEvent OnMagnetExited;
 
 		public MagnetSO MagnetStats {
 			get => magnetStats;
@@ -88,12 +93,18 @@ namespace MagnetGame
 		}
 
 		public void OnPointerClick(PointerEventData eventData) {
-			if (!isSelectable)
+			if (!isSelectable || GameStateManager.IsPaused())
 				return;
+
 			OnMagnetClicked?.Invoke(this);
 		}
 
 		public void OnPointerEnter(PointerEventData eventData) {
+			if (GameStateManager.IsPaused())
+				return;
+
+			OnMagnetHovered?.Invoke(this.MagnetStats);
+
 			if (!isSelectable)
 				return;
 
@@ -102,11 +113,15 @@ namespace MagnetGame
 		}
 
 		public void OnPointerExit(PointerEventData eventData) {
+			OnMagnetExited?.Invoke();
+
 			if (!isSelectable)
 				return;
 			if (!isSelected) {
-				AudioManager.instance.Play("card_pop_down");
 				graphics.transform.localPosition = Vector3.zero;
+				if (GameStateManager.IsPaused())
+					return;
+				AudioManager.instance.Play("card_pop_down");
 			}
 		}
 

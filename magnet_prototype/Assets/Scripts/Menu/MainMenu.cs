@@ -14,13 +14,13 @@ public class MainMenu : MonoBehaviour
 
     public void QuitGame () 
     {
-        //Debug.Log ("Quit");
         AudioManager.instance.Play("botao_sair");
         Application.Quit();
     }
 
     public void ToMainMenu()
 	{
+        AudioManager.instance.Play("botao_sair");
         SceneManager.LoadScene("MainMenu");
 	}
 }

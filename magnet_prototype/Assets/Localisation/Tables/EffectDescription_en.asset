@@ -19,11 +19,11 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 9890177024
-    m_Localized: Recovers 1 HP.
+    m_Localized: Heals 1 HP.
     m_Metadata:
       m_Items: []
   - m_Id: 1502334611632128
-    m_Localized: On your next turn, you are immune to the effects of your opponent's
+    m_Localized: On your next turn, you will be immune to the effects of your opponent's
       magnet.
     m_Metadata:
       m_Items: []
@@ -32,12 +32,12 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1502772601827328
-    m_Localized: On your next turn, turn a loss into a draw or a draw into a win.
+    m_Localized: On your next turn, make a loss into a draw or a draw into a win.
     m_Metadata:
       m_Items: []
   - m_Id: 1502791891431424
-    m_Localized: Discard your hand and buy three new magnets. You do not pull magnets
-      on this turn.
+    m_Localized: Discard your hand and draw three new magnets. You shall not draw
+      magnets on this turn.
     m_Metadata:
       m_Items: []
   - m_Id: 1502806273699840
@@ -45,12 +45,12 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1502818634313728
-    m_Localized: Once used, the magnet returns to your hand. You do not pull magnets
+    m_Localized: Once used, the magnet returns to your hand. You shall not draw magnets
       on this turn.
     m_Metadata:
       m_Items: []
   - m_Id: 1502833314377728
-    m_Localized: On your next turn, gain armor that reduces damage taken by 1.
+    m_Localized: On your next turn, gain armour that reduces damage taken by 1.
     m_Metadata:
       m_Items: []
   references:
