@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57e5efdd0c4210b19bd73a6eed6fcd7c, type: 3}
   m_Name: Level1
   m_EditorClassIdentifier: 
-  opponentName: Op1
+  opponentName: "Dion\xEDdia"
   scenarySprite: {fileID: 21300000, guid: d54634917ef6d54469058f86ce58886e, type: 3}
-  opponentSprite: {fileID: 0}
+  opponentSprite: {fileID: 21300000, guid: 15797d64b539e400cb0e7d09c7dd0d54, type: 3}
