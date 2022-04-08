@@ -30,6 +30,11 @@ namespace MagnetGame {
 				: GameState.RUNNING;
 		}
 
+		public void Pause() {
+			if (GameStateManager.Instance.CurrentGameState != GameState.PAUSED)
+				GameStateManager.Instance.CurrentGameState = GameState.PAUSED;
+		}
+
 		public void Unpause() {
 			if (GameStateManager.Instance.CurrentGameState == GameState.PAUSED)
 				GameStateManager.Instance.CurrentGameState = GameState.RUNNING;
