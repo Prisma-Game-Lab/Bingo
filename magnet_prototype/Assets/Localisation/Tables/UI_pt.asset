@@ -58,5 +58,9 @@ MonoBehaviour:
     m_Localized: Voltar
     m_Metadata:
       m_Items: []
+  - m_Id: 7127029853986816
+    m_Localized: 'Efeito do vencedor:'
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

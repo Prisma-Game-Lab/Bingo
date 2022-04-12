@@ -55,6 +55,10 @@ MonoBehaviour:
     m_Key: return_button
     m_Metadata:
       m_Items: []
+  - m_Id: 7127029853986816
+    m_Key: victor_effect
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
