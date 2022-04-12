@@ -62,5 +62,9 @@ MonoBehaviour:
     m_Localized: 'Efeito do vencedor:'
     m_Metadata:
       m_Items: []
+  - m_Id: 7128416386031616
+    m_Localized: "Escolha uma im\xE3.\nCuidado! A outra vai para seu oponente!"
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

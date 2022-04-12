@@ -18,6 +18,7 @@ namespace MagnetGame
 		[SerializeField] private GameObject resultUI;
 		[SerializeField] private GameObject roundResultText;
 		[SerializeField] private GameObject roundResultEffectText;
+		[SerializeField] private GameObject drawInstructionsText;
 
 		private Dictionary<Magnet, GameObject> magnetGO;
 
@@ -38,6 +39,7 @@ namespace MagnetGame
 		}
 
 		private void Start() {
+			drawInstructionsText.SetActive(false);
 			resultUI.SetActive(false);
 			cardPair.SetActive(false);
 			playerEffectSelection.SetActive(false);
@@ -136,6 +138,7 @@ namespace MagnetGame
 						ai.AddToHand(magnetPairGO[0].GetComponent<Magnet>().MagnetStats);
 
 					magnet.IsSelected = false;
+					drawInstructionsText.SetActive(false);
 					cardPair.SetActive(false);
 
 
@@ -316,6 +319,7 @@ namespace MagnetGame
 
 				if (playerChooses) {
 					cardPair.SetActive(true);
+					drawInstructionsText.SetActive(true);
 
 					foreach (var magnet in magnetPairGO)
 						magnet.GetComponent<Magnet>().isSelectable = true;

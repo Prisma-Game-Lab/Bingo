@@ -62,5 +62,12 @@ MonoBehaviour:
     m_Localized: 'Winner effect:'
     m_Metadata:
       m_Items: []
+  - m_Id: 7128416386031616
+    m_Localized: 'Choose a magnet.
+
+      Attention! The other one will go to your
+      opponent!'
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

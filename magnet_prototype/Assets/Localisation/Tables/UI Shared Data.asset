@@ -59,6 +59,10 @@ MonoBehaviour:
     m_Key: victor_effect
     m_Metadata:
       m_Items: []
+  - m_Id: 7128416386031616
+    m_Key: draw_instructions
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
